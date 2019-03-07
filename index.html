@@ -35,12 +35,21 @@
           font-family: 'Playfair Display SC';
           font-size: 50px;
         }
-            body {
-      background-image: url("http://sfwallpaper.com/images/city-at-night-background-22.jpg");
-      background-color: #cccccc;
-      background-size: cover;
-      background-repeat: no-repeat;
-        }
+        body {
+            background-image: url("http://sfwallpaper.com/images/city-at-night-background-22.jpg");
+            background-color: #cccccc;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            height: 100%;
+            width: 100%;
+
+            overflow: hidden;
+              }
 
         .countdownContainer{
           position: absolute;
@@ -85,6 +94,7 @@
 
           .button:hover {
             box-shadow: 0 12px 16px 0 rgb(248,248,255), 0 17px 50px 0 rgb(248,248,255);
+            opacity: 0.7;
           }
           a {
             color: inherit;
@@ -105,7 +115,9 @@
                 opacity: 0.7;
                 box-shadow: 0 12px 16px 0 rgb(0,191,255), 0 17px 50px 0 rgb(0,191,255);
             }
+            @media screen and (max-width: 768px) {
 
+            }
         </style>
 
 
@@ -130,7 +142,7 @@
 
           function countdown(){
             var now = new Date();
-            var eventDate = new Date(2019, 08, 09);
+            var eventDate = new Date(2019, 06, 09);
 
             var currentTiime = now.getTime();
             var eventTime = eventDate.getTime();
